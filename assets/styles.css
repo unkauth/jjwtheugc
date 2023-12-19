@@ -1,0 +1,396 @@
+:root {
+  --body-background: #DEDEDE;
+  --text-color: #000000;
+  --icon-color-mobile: #DEDEDE;
+  --navbar-background-mobile: #000000;
+  --laurel-filter: invert(0);
+}
+
+@font-face {
+  font-family: Montserrat;
+  src: url(/assets/fonts/Montserrat.ttf);
+  font-display: fallback;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: var(--body-background);
+  box-sizing: border-box;
+  margin: 0;
+  transition: ease-in 1s;
+  color: var(--text-color);
+}
+
+a {
+  transition: ease-in 1s;
+  color: var(--text-color);
+}
+
+h1 {
+  font-size: 5em;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2.5em;
+  text-align: center;
+}
+
+h3 {
+  font-size: 1.8em;
+  font-weight: lighter;
+}
+
+.rainbow {
+  transition: color ease-in 0.8s;
+  margin-bottom: 0;
+}
+
+#resume-link {
+  font-size: 1.5em;
+  margin-top: 0;
+  margin-left: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+#kauthar-pic {
+  width: 300px;
+  margin: auto;
+  display: block;
+  transition: filter 1s;
+}
+
+#film-editor {
+  margin-top: 120px;
+}
+
+.laurel {
+  width: 20px;
+  position: relative;
+  top: 2px;
+  filter: var(--laurel-filter);
+  transition: filter 1s ease-in;
+}
+
+.container-main {
+  max-width: 1200px;
+  padding: 0;
+  margin: auto;
+  margin-top: 100px;
+  border-right: 1px solid var(--text-color);
+  border-left: 1px solid var(--text-color);
+  transition: border-color 1s ease;
+}
+
+.container-sm {
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.image-box img {
+  max-width: 100%;
+}
+
+.image-source {
+  font-size: 0.8em;
+  bottom: 0%;
+  right: 0%;
+}
+
+.featured-image-view {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.featured-image-view img {
+  max-width: 100%;
+  max-height: 400px;
+  justify-self: center;
+  margin-top: 20px;
+}
+.featured-image-view2 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-evenly;
+}
+
+.featured-image-view2 img {
+  max-width: 50%;
+  max-height: 500px;
+  justify-self: start;
+  margin-top: 20px;
+}
+
+#hexagon {
+  padding: 2em;
+  height: 40px;
+  animation: spin 10s linear infinite;
+  filter: grayscale(100%);
+  transition: filter ease-in 1s;
+}
+
+#css-is-stupid {
+  transform: translate(-130%, 1.3%);
+  position: fixed;
+  display: flex;
+  flex-flow: column;
+  z-index: 1000;
+}
+
+#css-is-stupid svg {
+  height: 30px;
+  width: 30px;
+  padding: 2em;
+  overflow: visible;
+}
+
+#css-is-stupid img:hover, #css-is-stupid svg:hover {
+  cursor: pointer;
+}
+
+.film-deets {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  gap: 10px;
+}
+
+/* Utility class for nice trendy rounded corners */
+.rounded-corners {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+#footer {
+  margin-top: 100px;
+  text-align: center;
+}
+
+@keyframes spin { 100% { transform:rotate(360deg); } }
+
+@media only screen and (max-width: 1600px) {
+  .container-main {
+    max-width: 1000px;
+    margin-top: 60px;
+  }
+
+  .film-deets iframe {
+    width: 520px;
+    height: 300px;
+    margin: 0;
+  }
+
+  #kauthar-pic {
+    right: 24%;
+  }
+
+  .featured-image-view {
+    justify-content: space-around;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .film-deets iframe {
+    width: 520px;
+    margin: 0;
+  }
+}
+
+@media only screen and (max-width: 1160px) {
+  #css-is-stupid {
+    flex-flow: row;
+    transform: translate(0);
+    top: 0px;
+    left: 0px;
+    background: var(--navbar-background-mobile);
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  #film-editor, #graphic-designer, #brands-and-companies {
+    scroll-margin-top: 65px;
+  }
+
+  #kauthar-pic {
+    right: 15%;
+  }
+
+  #css-is-stupid svg {
+    height: 32px;
+    color: #DEDEDE;
+    padding: 1.2em;
+  }
+
+  #hexagon {
+    padding: 1em;
+  }
+
+  .film-deets iframe {
+    width: 460px;
+  }
+
+  .container-main {
+    border: 0;
+    margin-top: 80px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  #name {
+    font-size: 3.5em;
+  }
+
+  .container-sm {
+    margin: 5px;
+  }
+
+  .film-deets {
+    grid-template-columns: 100%;
+    gap: 10px;
+  }
+
+  .film-deets iframe {
+    width: 100%;
+    justify-self: center;
+    margin: 0;
+  }
+
+  .film-deets * {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  #resume-link {
+    text-align: center;
+    margin-left: 0;
+  }
+
+  #name {
+    text-align: center;
+  }
+
+  #kauthar-pic {
+    margin: 0 auto;
+    display: block;
+    width: 160px;
+    position: initial;
+  }
+
+  #film-editor {
+    margin-top: 10px;
+  }
+
+  .featured-image-view img {
+    align-self: center;
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+@media only screen and (prefers-reduced-motion: reduce) {
+  #hexagon {
+    animation: none;
+  }
+}
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+
+/* Make the images invisible by default */
+.Containers {
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+/* forward & Back buttons */
+.Back, .forward {
+  cursor: pointer;
+  position: absolute;
+  top: 48%;
+  width: auto;
+  margin-top: -23px;
+  padding: 17px;
+  color: grey;
+  font-weight: bold;
+  font-size: 19px;
+  transition: 0.4s ease;
+  border-radius: 0 5px 5px 0;
+  user-select: none;
+}
+
+/* Place the "forward button" to the right */
+.forward {
+  right: 0;
+  border-radius: 4px 0 0 4px;
+}
+
+/*when the user hovers,add a black background with some little opacity */
+.Back:hover, .forward:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption Info */
+.Info {
+  color: #e3e3e3;
+  font-size: 16px;
+  padding: 10px 14px;
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Worknumbering (1/3 etc) */
+.MessageInfo {
+  color: #f2f2f3;
+  font-size: 14px;
+  padding: 10px 14px;
+  position: absolute;
+  top: 0;
+}
+
+/* The circles or bullets and indicators */
+.dots {
+  cursor: pointer;
+  height: 16px;
+  width: 16px;
+  margin: 0 3px;
+  background-color: #acc;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.5s ease;
+}
+
+.enable, .dots:hover {
+  background-color: #717161;
+}
+
+/* Faint animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.4s;
+  animation-name: fade;
+  animation-duration: 1.4s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .5}
+  to {opacity: 2}
+}
+
+@keyframes fade {
+  from {opacity: .5}
+  to {opacity: 2}
+}
